@@ -28,10 +28,19 @@ workflows:
     build-and-test:
       jobs:
         - development-deploy:
+            filters:
+              branches:
+                only: master
         - approval-job:
             type: approval
             requires:
               - development-deploy
+            filters:
+              branches:
+                only: master
         - production-deploy:
             requires:
               - approval-job
+            filters:
+              branches:
+                only: master
