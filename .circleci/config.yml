@@ -23,7 +23,7 @@ jobs:
             - "72:ff:5c:f9:5e:6f:49:66:36:3f:88:92:ab:29:82:f4"
       - run:
           command: |
-            ssh  ubuntu@ec2-18-188-66-115.us-east-2.compute.amazonaws.com "bash deployPr.sh"
+            ssh  ubuntu@ec2-18-188-66-115.us-east-2.compute.amazonaws.com "bash deployP.sh"
 workflows:
     build-and-test:
       jobs:
