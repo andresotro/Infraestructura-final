@@ -27,10 +27,7 @@ jobs:
 workflows:
     build-and-test:
       jobs:
-        - development-deploy:
-            filters:
-              branches:
-                only: desarrollo
+        - development-deploy
         - approval-job:
             type: approval
             requires:
